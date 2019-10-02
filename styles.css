@@ -38,25 +38,26 @@ strong {
   display: inline;
 }
 
-.course {
+.plain-list {
   margin-top: 0;
   padding-left: 0;
   list-style: none;
 }
 
-.course strong {
+.plain-list strong {
   font-weight: 400;
 }
 
-.course--inline {
+.plain-list--inline {
   display: inline;
 }
 
-.course--inline li {
+.plain-list--inline li {
   display: inline;
 }
 
-.dates {
+.dates,
+.level {
   color: #f44336;
   font-size: 0.8rem;
 }
@@ -74,4 +75,17 @@ header .title-section {
 header span {
   display: block;
   margin-top: -0.1rem;
+}
+
+aside {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #ccc;
+  font-size: 0.8rem;
+}
+
+aside .title-section {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
