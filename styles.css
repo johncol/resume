@@ -6,6 +6,7 @@ body {
   line-height: 1.5;
   font-size: 17px;
   font-family: 'Nunito Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: default;
 }
 
 p {
@@ -14,6 +15,36 @@ p {
 
 strong {
   font-weight: 700;
+}
+
+address {
+  font-style: normal;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  text-align: right;
+  padding-top: 1rem;
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px dashed #ccc;
+}
+
+address > * {
+  display: block;
+}
+
+address .plain-list strong {
+  color: #f44336;
+  font-weight: 600;
+}
+
+address a:link,
+address a:visited {
+  text-decoration: none;
+  color: inherit;
+  transition: color 200ms;
+}
+
+address a:hover {
+  color: #111;
 }
 
 .title-main {
