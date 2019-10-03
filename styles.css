@@ -167,9 +167,9 @@ aside .title-section {
   header img {
     display: initial;
     float: left;
-    width: 90px;
     margin-right: 1rem;
-    border-radius: 45px;
+    width: 5.2rem;
+    border-radius: 2.6rem;
     filter: grayscale(1);
   }
 }
