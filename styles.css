@@ -125,6 +125,10 @@ aside .title-section {
 }
 
 @media (min-width: 600px) {
+  .container {
+    padding: 1rem 1.5rem;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -142,9 +146,20 @@ aside .title-section {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   .container {
-    padding-top: 20px;
+    padding: 3rem 3.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  html,
+  body {
+    background-color: #525659;
+  }
+
+  .container {
+    padding: 3rem 3.5rem;
     max-width: 900px;
     margin: 0 auto;
     display: grid;
@@ -153,6 +168,8 @@ aside .title-section {
       'header header'
       'main aside';
     column-gap: 3rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 3px 4px rgba(77, 77, 77, 1);
   }
 
   header {
