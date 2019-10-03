@@ -98,6 +98,10 @@ address a:hover {
   font-size: 0.8rem;
 }
 
+header img {
+  display: none;
+}
+
 header .title-main {
   margin: 0;
 }
@@ -139,6 +143,10 @@ aside .title-section {
     justify-content: space-between;
   }
 
+  header section {
+    flex-grow: 1;
+  }
+
   address {
     border: unset;
     margin-top: 0.6rem;
@@ -151,9 +159,18 @@ aside .title-section {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 750px) {
   .container {
     padding: 2rem 2.5rem;
+  }
+
+  header img {
+    display: initial;
+    float: left;
+    width: 90px;
+    margin-right: 1rem;
+    border-radius: 45px;
+    filter: grayscale(1);
   }
 }
 
