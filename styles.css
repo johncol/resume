@@ -94,8 +94,7 @@ address a:hover {
 }
 
 header .title-main {
-  margin-top: 1.5rem;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 header .title-section {
@@ -119,4 +118,24 @@ aside .title-section {
   margin-top: 1rem;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  address {
+    border: unset;
+    margin-top: 0.6rem;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 }
