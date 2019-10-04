@@ -4,7 +4,7 @@ body {
   padding: 10px;
   color: #555;
   line-height: 1.5;
-  font-size: 17px;
+  font-size: 15px;
   font-family: 'Nunito Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   cursor: default;
   user-select: none;
@@ -65,7 +65,7 @@ address a:hover {
 }
 
 .title-inner-section {
-  margin-top: 0.9rem;
+  margin-top: 1rem;
   margin-bottom: 0;
   font-weight: 600;
 }
@@ -134,6 +134,11 @@ aside .title-section {
 }
 
 @media (min-width: 600px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
   .container {
     padding: 1rem 1.5rem;
   }
