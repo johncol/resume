@@ -265,7 +265,7 @@ aside .title-section {
 
   aside#languages-and-tools {
     opacity: 0;
-    animation: slideFromRight 1.5s cubic-bezier(0.08, 0.96, 0.36, 0.99) 0.3s 1 normal
+    animation: slideFromLeft 1.5s cubic-bezier(0.08, 0.96, 0.36, 0.99) 1.5s 1 normal
       forwards;
   }
 }
