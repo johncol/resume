@@ -135,7 +135,7 @@ aside .title-section {
   font-weight: 500;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 600px), print {
   html,
   body {
     font-size: 16px;
@@ -166,7 +166,7 @@ aside .title-section {
   }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 750px), print {
   .container {
     padding: 2rem 2.5rem;
   }
@@ -181,7 +181,7 @@ aside .title-section {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 800px), print {
   html,
   body {
     background-color: #525659;
@@ -222,13 +222,13 @@ aside .title-section {
   }
 }
 
-@media (min-width: 1010px) {
+@media (min-width: 1010px), print {
   .container {
     margin: 10px auto;
   }
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   header section {
     opacity: 0;
     animation: slideFromLeft 1.5s cubic-bezier(0.08, 0.96, 0.36, 0.99) normal forwards;
@@ -267,6 +267,18 @@ aside .title-section {
     opacity: 0;
     animation: slideFromLeft 1.5s cubic-bezier(0.08, 0.96, 0.36, 0.99) 1.5s 1 normal
       forwards;
+  }
+}
+
+@media print {
+  body {
+    background-color: #fff;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+    box-shadow: unset;
   }
 }
 
