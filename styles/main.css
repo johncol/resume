@@ -97,6 +97,69 @@ address a:hover {
   display: inline;
 }
 
+.skills-list li::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  background: linear-gradient(
+    to right,
+    rgba(244, 67, 54, 0.4) 0%,
+    rgba(244, 67, 54, 0.4) 100%
+  );
+  opacity: 0.6;
+  transition: background 0.4s ease-in-out;
+}
+
+.skills-list li:hover::after {
+  opacity: 1;
+}
+
+.skills-list li[title='Learning']::after,
+.skills-list li[title='Some Knowledge']::after {
+  background: linear-gradient(
+    to right,
+    rgba(244, 67, 54, 1) 0%,
+    rgba(244, 67, 54, 1) 25%,
+    rgba(244, 67, 54, 0.3) 25%,
+    rgba(244, 67, 54, 0.3) 100%
+  );
+}
+
+.skills-list li[title='Moderate Knowledge']::after {
+  background: linear-gradient(
+    to right,
+    rgba(244, 67, 54, 1) 0%,
+    rgba(244, 67, 54, 1) 50%,
+    rgba(244, 67, 54, 0.3) 50%,
+    rgba(244, 67, 54, 0.3) 100%
+  );
+}
+
+.skills-list li[title='Strong Knowledge']::after,
+.skills-list li[title='Professional Working Proficiency']::after {
+  background: linear-gradient(
+    to right,
+    rgba(244, 67, 54, 1) 0%,
+    rgba(244, 67, 54, 1) 75%,
+    rgba(244, 67, 54, 0.3) 75%,
+    rgba(244, 67, 54, 0.3) 100%
+  );
+}
+
+.skills-list li[title='Experienced']::after,
+.skills-list li[title='Native']::after {
+  background: linear-gradient(
+    to right,
+    rgba(244, 67, 54, 1) 0%,
+    rgba(244, 67, 54, 1) 100%,
+    rgba(244, 67, 54, 0.3) 100%,
+    rgba(244, 67, 54, 0.3) 100%
+  );
+}
+
 .dates,
 .level {
   color: #f44336;
@@ -125,14 +188,14 @@ aside {
   padding-top: 1rem;
   border-top: 1px dashed #ccc;
   font-size: 0.8rem;
-  text-align: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 3rem;
 }
 
 aside .title-section {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -164,8 +227,8 @@ aside .title-section {
   }
 
   header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 10rem;
   }
 
   header section {
@@ -174,7 +237,7 @@ aside .title-section {
 
   address {
     border: unset;
-    margin-top: 0.6rem;
+    margin-top: 0;
     padding-top: 0;
   }
 
@@ -236,7 +299,11 @@ aside .title-section {
     border-top: unset;
     padding-top: 0;
     margin-top: 1.7rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  aside section:first-child .title-section {
+    margin-top: 0;
   }
 }
 
