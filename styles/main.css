@@ -12,7 +12,7 @@ body {
 
 .container {
   box-sizing: border-box;
-  border-top: 0.4rem solid #f44336;
+  border-top: 0.4rem solid rgba(244, 67, 54, 1);
   padding: 2rem 1rem;
 }
 
@@ -39,7 +39,7 @@ address > * {
 }
 
 address .plain-list strong {
-  color: #f44336;
+  color: rgba(244, 67, 54, 1);
   font-weight: 600;
 }
 
@@ -63,7 +63,7 @@ address a:hover {
 }
 
 .title-section {
-  color: #f44336;
+  color: rgba(244, 67, 54, 1);
   font-size: 1.2rem;
   margin-top: 1.3rem;
   margin-bottom: 0;
@@ -162,7 +162,7 @@ address a:hover {
 
 .dates,
 .level {
-  color: #f44336;
+  color: rgba(244, 67, 54, 1);
   font-size: 0.8rem;
 }
 
