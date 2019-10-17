@@ -1,8 +1,14 @@
+html {
+  --font-color: #555;
+  --main-color: rgba(79, 120, 164, 1);
+  --main-color-soft: rgba(79, 120, 164, 0.3);
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  color: #555;
+  color: var(--font-color);
   line-height: 1.5;
   font-size: 15px;
   font-family: 'Nunito Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,7 +18,7 @@ body {
 
 .container {
   box-sizing: border-box;
-  border-top: 0.4rem solid rgba(244, 67, 54, 1);
+  border-top: 0.4rem solid var(--main-color);
   padding: 2rem 1rem;
 }
 
@@ -39,7 +45,7 @@ address > * {
 }
 
 address .plain-list strong {
-  color: rgba(244, 67, 54, 1);
+  color: var(--main-color);
   font-weight: 600;
 }
 
@@ -57,13 +63,13 @@ address a:hover {
 .title-main {
   font-size: 4rem;
   line-height: 1em;
-  color: #555;
+  color: var(--font-color);
   font-weight: 100;
   margin: 0 0 0.5rem;
 }
 
 .title-section {
-  color: rgba(244, 67, 54, 1);
+  color: var(--main-color);
   font-size: 1.2rem;
   margin-top: 1.3rem;
   margin-bottom: 0;
@@ -106,11 +112,11 @@ address a:hover {
   margin-bottom: 12px;
   background: linear-gradient(
     to right,
-    rgba(244, 67, 54, 0.4) 0%,
-    rgba(244, 67, 54, 0.4) 100%
+    var(--main-color-soft) 0%,
+    var(--main-color-soft) 100%
   );
-  opacity: 0.6;
-  transition: background 0.4s ease-in-out;
+  opacity: 0.8;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .skills-list li:hover::after {
@@ -121,20 +127,20 @@ address a:hover {
 .skills-list li[title='Some Knowledge']::after {
   background: linear-gradient(
     to right,
-    rgba(244, 67, 54, 1) 0%,
-    rgba(244, 67, 54, 1) 25%,
-    rgba(244, 67, 54, 0.3) 25%,
-    rgba(244, 67, 54, 0.3) 100%
+    var(--main-color) 0%,
+    var(--main-color) 25%,
+    var(--main-color-soft) 25%,
+    var(--main-color-soft) 100%
   );
 }
 
 .skills-list li[title='Moderate Knowledge']::after {
   background: linear-gradient(
     to right,
-    rgba(244, 67, 54, 1) 0%,
-    rgba(244, 67, 54, 1) 50%,
-    rgba(244, 67, 54, 0.3) 50%,
-    rgba(244, 67, 54, 0.3) 100%
+    var(--main-color) 0%,
+    var(--main-color) 50%,
+    var(--main-color-soft) 50%,
+    var(--main-color-soft) 100%
   );
 }
 
@@ -142,10 +148,10 @@ address a:hover {
 .skills-list li[title='Professional Working Proficiency']::after {
   background: linear-gradient(
     to right,
-    rgba(244, 67, 54, 1) 0%,
-    rgba(244, 67, 54, 1) 75%,
-    rgba(244, 67, 54, 0.3) 75%,
-    rgba(244, 67, 54, 0.3) 100%
+    var(--main-color) 0%,
+    var(--main-color) 75%,
+    var(--main-color-soft) 75%,
+    var(--main-color-soft) 100%
   );
 }
 
@@ -153,16 +159,16 @@ address a:hover {
 .skills-list li[title='Native']::after {
   background: linear-gradient(
     to right,
-    rgba(244, 67, 54, 1) 0%,
-    rgba(244, 67, 54, 1) 100%,
-    rgba(244, 67, 54, 0.3) 100%,
-    rgba(244, 67, 54, 0.3) 100%
+    var(--main-color) 0%,
+    var(--main-color) 100%,
+    var(--main-color-soft) 100%,
+    var(--main-color-soft) 100%
   );
 }
 
 .dates,
 .level {
-  color: rgba(244, 67, 54, 1);
+  color: var(--main-color);
   font-size: 0.8rem;
 }
 
