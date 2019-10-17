@@ -1,7 +1,9 @@
 html {
-  --font-color: #555;
-  --main-color: rgba(79, 120, 164, 1);
-  --main-color-soft: rgba(79, 120, 164, 0.3);
+  --font-color: #666;
+
+  --rgb-for-main-color: 244, 54, 61;
+  --main-color: rgb(var(--rgb-for-main-color));
+  --main-color-soft: rgba(var(--rgb-for-main-color), 0.3);
 }
 
 html,
