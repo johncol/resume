@@ -330,7 +330,8 @@ aside .title-section {
   }
 
   .popup {
-    display: block;
+    /* feature disabled temporarily display: block; */
+    display: none;
     position: fixed;
     top: 0;
     left: -0;
