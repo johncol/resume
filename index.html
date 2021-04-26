@@ -1,384 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="John Resume" />
+    <meta name="description" content="Online version of my resume" />
+    <meta name="keywords" content="resume, developer, software, engineer, experience" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="John Cely" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-  <meta name="title" content="John Resume" />
-  <meta name="description" content="Online version of my resume" />
-  <meta name="keywords" content="resume, developer, software, engineer, experience" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="English" />
-  <meta name="author" content="John Cely" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>John Resume</title>
 
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-  <title>John Resume</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,500,600,700&display=swap" rel="stylesheet" />
 
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script defer src="./web-components.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="styles/main.css" />
-</head>
-
-<body>
-  <div class="container">
-    <header>
+  <body>
+    <template id="journey-item">
+      <link rel="stylesheet" href="styles/main.css" />
       <section>
-        <img src="images/photo.jpg" alt="Photo" />
-        <h1 class="title-main">
-          John Alexander Cely Suarez
-        </h1>
-        <h2 class="title-section">
-          Software Engineer
-        </h2>
-        <span>Vancouver, BC, Canada</span>
+        <h3 class="title-inner-section">
+          <slot name="identifier"></slot>
+        </h3>
+        <div class="dates">
+          <time><slot name="period-start"></slot></time> -
+          <time><slot name="period-end"></slot></time>
+        </div>
+        <slot name="summary"></slot>
       </section>
-      <address>
-        <ul class="plain-list">
-          <li>
-            <strong class="phone-number">
-              <a href="tel:+1 (236) 513-6149">+1 (236) 513-6149</a>
-            </strong>
-          </li>
-          <li>
-            <a target="_blank" href="mailto:john.19col+resume@gmail.com">
-              john.19col@gmail.com
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://github.com/johncol">
-              github.com/johncol
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.linkedin.com/in/john-cely">
-              linkedin.com/in/john-cely
-            </a>
-          </li>
-        </ul>
-      </address>
-    </header>
+    </template>
 
-    <main>
-      <section id="profile">
-        <h2 class="title-section">
-          Profile
-        </h2>
-        <p>
-          I am a <strong>software developer</strong> with 8+ years of
-          experience working with <strong>java</strong>, <strong>go</strong>,
-          <strong>angular</strong>, and <strong>react</strong>. I love coding,
-          that's my hobby and my job, and I do it in the best way I’m able to,
-          keeping code clean, readable, with meaningful tests, and split into
-          small pieces that make sense.
-        </p>
-      </section>
-
-      <section id="experience">
-        <h2 class="title-section">
-          Experience
-        </h2>
-
-        <section id="amazon">
-          <h3 class="title-inner-section">
-            Software Engineer at Amazon
-          </h3>
-          <div class="dates">
-            <time datetime="2021/03/08">2021/03</time> - <span>Now</span>
-          </div>
-          <p>
-            Software engineer at Amazon Retail payments team.
-          </p>
-        </section>
-
-        <section id="twilio">
-          <h3 class="title-inner-section">
-            Fullstack Senior Engineer at Twilio
-          </h3>
-          <div class="dates">
-            <time datetime="2018/10/01">2018/10</time> - <time datetime="2021/02/19">2021/02</time>
-          </div>
-          <p>
-            Receive requirements, propose solutions, plan, develop, test and
-            deploy. I build UIs using React / Typescript / SCSS, middlewares
-            and APIs with Java and Go, and persist data in MongoDB/DocumentDB
-            and DynamoDB.
-            <a href="#twilio-popup" class="see-more">See more</a>
-          </p>
-        </section>
-
-        <section id="scotiabank">
-          <h3 class="title-inner-section">
-            Fullstack Specialist at Scotiabank Digital Factory
-          </h3>
-          <div class="dates">
-            <time datetime="2017/05/01">2017/05</time> -
-            <time datetime="2018/10/01">2018/10</time>
-          </div>
-          <p>
-            Designed, built and deployed APIs with Java and Spring Cloud.
-            Built UIs with Angular.
-            <a href="#scotiabank-popup" class="see-more">See more</a>
-          </p>
-        </section>
-
-        <section id="globant">
-          <h3 class="title-inner-section">
-            Angular Developer at Globant
-          </h3>
-          <div class="dates">
-            <time datetime="2016/05/01">2016/05</time> -
-            <time datetime="2017/05/01">2017/05</time>
-          </div>
-          <p>
-            Tested and built SPAs with Angular. Also used HTML5 Canvas API and
-            Fabric.js.
-            <a href="#globant-popup" class="see-more">See more</a>
-          </p>
-        </section>
-
-        <section id="prodigious">
-          <h3 class="title-inner-section">
-            Senior Java Developer at Prodigious
-          </h3>
-          <div class="dates">
-            <time datetime="2015/08/01">2015/08</time> -
-            <time datetime="2016/05/01">2016/05</time>
-          </div>
-          <p>
-            Developed AEM components, tags and sling servlets with Java 8.
-            <a href="#prodigious-popup" class="see-more">See more</a>
-          </p>
-        </section>
-
-        <section id="seven4n">
-          <h3 class="title-inner-section">
-            Junior Software Engineer at Seven4n
-          </h3>
-          <div class="dates">
-            <time datetime="2013/08/01">2013/08</time> -
-            <time datetime="2015/08/01">2015/08</time>
-          </div>
-          <p>
-            Developed Java and Scala Rest APIs, SPAs using AngularJS, and used
-            MongoDB and Heroku.
-            <a href="#seven4n-popup" class="see-more">See more</a>
-          </p>
-        </section>
-
-        <section id="unal">
-          <h3 class="title-inner-section">
-            Java/JavaScript Developer at Universidad Nacional de Colombia
-          </h3>
-          <div class="dates">
-            <time datetime="2012/08/01">2012/08</time> -
-            <time datetime="2013/08/01">2013/08</time>
-          </div>
-          <p>
-            Developed core features of Java applications at the university’s
-            admissions department. Used HTML, CSS, JavaScript/jQuery, Groovy,
-            Grails, Hibernate and PostgreSQL.
-            <a href="#unal-popup" class="see-more">See more</a>
-          </p>
-        </section>
-      </section>
-
-      <section id="education">
-        <h2 class="title-section">
-          Education
-        </h2>
-
+    <div class="container">
+      <header>
         <section>
-          <h3 class="title-inner-section">
-            Bachelor in Computing Engineering
-          </h3>
-          <div class="dates">
-            <time datetime="2008/01/01">2008/01</time> -
-            <time datetime="2013/12/01">2013/12</time>
-          </div>
-          <p>
-            Universidad Nacional de Colombia (GPA 4.3/5)
-          </p>
+          <img src="images/photo.jpg" alt="Photo" />
+          <h1 class="title-main">John Alexander Cely Suarez</h1>
+          <h2 class="title-section">Software Engineer</h2>
+          <span>Vancouver, BC, Canada</span>
         </section>
-      </section>
-
-      <section id="other-studies">
-        <h2 class="title-section">
-          Other Studies
-        </h2>
-
-        <section>
-          <h3 class="title-inner-section">
-            Udemy
-          </h3>
-
+        <address>
           <ul class="plain-list">
             <li>
-              <strong>GraphQL with React - The Complete Developer's Guide</strong>
-              <time class="dates">2020</time>
+              <strong class="phone-number">
+                <a href="tel:+1 (236) 513-6149">+1 (236) 513-6149</a>
+              </strong>
             </li>
             <li>
-              <strong>Go - The Complete Developer's Guide</strong>
-              <time class="dates">2019</time>
+              <a target="_blank" href="mailto:john.19col+resume@gmail.com">john.19col@gmail.com </a>
             </li>
             <li>
-              <strong>Typescript - The Complete Developer's Guide</strong>
-              <time class="dates">2019</time>
+              <a target="_blank" href="https://github.com/johncol">github.com/johncol </a>
             </li>
             <li>
-              <strong>Firebase Masterclass</strong>
-              <time class="dates">2019</time>
+              <a target="_blank" href="https://www.linkedin.com/in/john-cely">linkedin.com/in/john-cely </a>
             </li>
-            <li>
-              <strong>Advanced CSS and SASS</strong>
-              <time class="dates">2018</time>
-            </li>
-            <li>
-              <strong>Progressive Web Applications</strong>
-              <time class="dates">2018</time>
-            </li>
-            <li>
-              <strong>Angular</strong>
-              <time class="dates">2017</time>
-            </li>
-            <li>
-              <strong>Javascript Essentials</strong>
-              <time class="dates">2017</time>
-            </li>
+          </ul>
+        </address>
+      </header>
+
+      <main>
+        <section id="profile">
+          <h2 class="title-section">Profile</h2>
+          <p>
+            I am a <strong>software developer</strong> with 8+ years of experience working with <strong>java</strong>,
+            <strong>go</strong>, <strong>angular</strong>, and <strong>react</strong>. I love coding, that's my hobby
+            and my job, and I do it in the best way I’m able to, keeping code clean, readable, with meaningful tests,
+            and split into small pieces that make sense.
+          </p>
+        </section>
+
+        <section id="experience">
+          <h2 class="title-section">Experience</h2>
+
+          <journey-item>
+            <span slot="identifier">Software Engineer at Amazon</span>
+            <span slot="period-start">2021/03</span>
+            <span slot="period-end">Now</span>
+            <p slot="summary">Software engineer at Amazon Retail payments team.</p>
+          </journey-item>
+
+          <journey-item>
+            <span slot="identifier">Fullstack Senior Engineer at Twilio</span>
+            <span slot="period-start">2018/10</span>
+            <span slot="period-end">2021/02</span>
+            <p slot="summary">
+              Receive requirements, propose solutions, plan, develop, test and deploy. I build UIs using
+              React/Typescript/SCSS, middlewares and APIs with Java and Go, and persist data in MongoDB/DocumentDB and
+              DynamoDB.
+            </p>
+          </journey-item>
+
+          <journey-item>
+            <span slot="identifier">Fullstack Specialist at Scotiabank Digital Factory </span>
+            <span slot="period-start">2017/05</span>
+            <span slot="period-end">2018/10</span>
+            <p slot="summary">Designed, built and deployed APIs with Java and Spring Cloud. Built UIs with Angular.</p>
+          </journey-item>
+
+          <journey-item>
+            <span slot="identifier">Angular Developer at Globant</span>
+            <span slot="period-start">2016/05</span>
+            <span slot="period-end">2017/05</span>
+            <p slot="summary">Tested and built SPAs with Angular. Also used HTML5 Canvas API and Fabric.js.</p>
+          </journey-item>
+
+          <journey-item>
+            <span slot="identifier">Senior Java Developer at Prodigious</span>
+            <span slot="period-start">2015/08</span>
+            <span slot="period-end">2016/05</span>
+            <p slot="summary">Developed AEM components, tags and sling servlets with Java 8.</p>
+          </journey-item>
+
+          <journey-item>
+            <span slot="identifier">Junior Software Engineer at Seven4n</span>
+            <span slot="period-start">2013/08</span>
+            <span slot="period-end">2015/08</span>
+            <p slot="summary">Developed Java and Scala Rest APIs, SPAs using AngularJS, and used MongoDB and Heroku.</p>
+          </journey-item>
+
+          <journey-item>
+            <span slot="identifier">Java/JavaScript Developer at Universidad Nacional de Colombia </span>
+            <span slot="period-start">2012/08</span>
+            <span slot="period-end">2013/08</span>
+            <p slot="summary">
+              Developed core features of Java applications at the university’s admissions department. Used HTML, CSS,
+              JavaScript/jQuery, Groovy, Grails, Hibernate and PostgreSQL.
+            </p>
+          </journey-item>
+        </section>
+
+        <section id="education">
+          <h2 class="title-section">Education</h2>
+
+          <journey-item>
+            <span slot="identifier">Bachelor in Computing Engineering</span>
+            <span slot="period-start">2008/01</span>
+            <span slot="period-end">2013/12</span>
+            <p slot="summary">Universidad Nacional de Colombia (GPA 4.3/5)</p>
+          </journey-item>
+        </section>
+
+        <section id="other-studies">
+          <h2 class="title-section">Other Studies</h2>
+
+          <section>
+            <h3 class="title-inner-section">Udemy</h3>
+
+            <ul class="plain-list">
+              <li>
+                <strong>GraphQL with React - The Complete Developer's Guide</strong>
+                <time class="dates">2020</time>
+              </li>
+              <li>
+                <strong>Go - The Complete Developer's Guide</strong>
+                <time class="dates">2019</time>
+              </li>
+              <li>
+                <strong>Typescript - The Complete Developer's Guide</strong>
+                <time class="dates">2019</time>
+              </li>
+              <li>
+                <strong>Firebase Masterclass</strong>
+                <time class="dates">2019</time>
+              </li>
+              <li>
+                <strong>Advanced CSS and SASS</strong>
+                <time class="dates">2018</time>
+              </li>
+              <li>
+                <strong>Progressive Web Applications</strong>
+                <time class="dates">2018</time>
+              </li>
+              <li>
+                <strong>Angular</strong>
+                <time class="dates">2017</time>
+              </li>
+              <li>
+                <strong>Javascript Essentials</strong>
+                <time class="dates">2017</time>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="title-inner-section title-inner-section--inline">Udacity</h3>
+            <ul class="plain-list plain-list--inline">
+              <li>
+                <strong>React Nanodegree</strong>
+                <time class="dates">2019</time>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="title-inner-section">Oracle</h3>
+
+            <ul class="plain-list">
+              <li>
+                <strong>Certified Professional, Java SE 8 Programmer</strong>
+                <time class="dates">2016</time>
+              </li>
+              <li>
+                <strong>Certified Associate, Java SE 8 Programmer</strong>
+                <time class="dates">2016</time>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="title-inner-section title-inner-section--inline">Mongo University</h3>
+            <ul class="plain-list plain-list--inline">
+              <li>
+                <strong>MongoDB for Java developers</strong>
+                <time class="dates">2015</time>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="title-inner-section title-inner-section--inline">Kleer</h3>
+            <ul class="plain-list plain-list--inline">
+              <li>
+                <strong>Scrum Developer Engineering Practices Training</strong>
+                <time class="dates">2014</time>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </main>
+
+      <aside id="languages-and-tools">
+        <section>
+          <h2 class="title-section">Languages</h2>
+          <ul class="plain-list skills-list">
+            <li title="Native">Spanish</li>
+            <li title="Professional Working Proficiency">English</li>
           </ul>
         </section>
 
         <section>
-          <h3 class="title-inner-section title-inner-section--inline">
-            Udacity
-          </h3>
-          <ul class="plain-list plain-list--inline">
-            <li>
-              <strong>React Nanodegree</strong>
-              <time class="dates">2019</time>
-            </li>
+          <h2 class="title-section">Development</h2>
+          <ul class="plain-list skills-list">
+            <li title="Experienced">HTML & CSS / SCSS</li>
+            <li title="Experienced">Javascript / Typescript</li>
+            <li title="Experienced">Java</li>
+            <li title="Moderate Knowledge">Go</li>
           </ul>
         </section>
 
         <section>
-          <h3 class="title-inner-section">
-            Oracle
-          </h3>
-
-          <ul class="plain-list">
-            <li>
-              <strong>Certified Professional, Java SE 8 Programmer</strong>
-              <time class="dates">2016</time>
-            </li>
-            <li>
-              <strong>Certified Associate, Java SE 8 Programmer</strong>
-              <time class="dates">2016</time>
-            </li>
+          <h2 class="title-section">SPAs</h2>
+          <ul class="plain-list skills-list">
+            <li title="Strong Knowledge">React</li>
+            <li title="Moderate Knowledge">Angular</li>
+            <li title="Some Knowledge">AngularJs</li>
           </ul>
         </section>
 
         <section>
-          <h3 class="title-inner-section title-inner-section--inline">
-            Mongo University
-          </h3>
-          <ul class="plain-list plain-list--inline">
-            <li>
-              <strong>MongoDB for Java developers</strong>
-              <time class="dates">2015</time>
-            </li>
+          <h2 class="title-section">Databases</h2>
+          <ul class="plain-list skills-list">
+            <li title="Moderate Knowledge">MongoDB</li>
+            <li title="Learning">Firestore</li>
+            <li title="Moderate Knowledge">PostgreSQL</li>
+            <li title="Moderate Knowledge">MySQL</li>
           </ul>
         </section>
 
         <section>
-          <h3 class="title-inner-section title-inner-section--inline">
-            Kleer
-          </h3>
-          <ul class="plain-list plain-list--inline">
-            <li>
-              <strong> Scrum Developer Engineering Practices Training</strong>
-              <time class="dates">2014</time>
-            </li>
+          <h2 class="title-section">Testing</h2>
+          <ul class="plain-list skills-list">
+            <li title="Strong Knowledge">Jasmine</li>
+            <li title="Learning">Jest</li>
+            <li title="Strong Knowledge">JUnit</li>
+            <li title="Strong Knowledge">Mockito</li>
+            <li title="Strong Knowledge">Hamcrest</li>
           </ul>
         </section>
-      </section>
-    </main>
 
-    <aside id="languages-and-tools">
-      <section>
-        <h2 class="title-section">
-          Languages
-        </h2>
-        <ul class="plain-list skills-list">
-          <li title="Native">Spanish</li>
-          <li title="Professional Working Proficiency">English</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="title-section">
-          Development
-        </h2>
-        <ul class="plain-list skills-list">
-          <li title="Experienced">HTML & CSS / SCSS</li>
-          <li title="Experienced">Javascript / Typescript</li>
-          <li title="Experienced">Java</li>
-          <li title="Moderate Knowledge">Go</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="title-section">
-          SPAs
-        </h2>
-        <ul class="plain-list skills-list">
-          <li title="Strong Knowledge">React</li>
-          <li title="Moderate Knowledge">Angular</li>
-          <li title="Some Knowledge">AngularJs</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="title-section">
-          Databases
-        </h2>
-        <ul class="plain-list skills-list">
-          <li title="Moderate Knowledge">MongoDB</li>
-          <li title="Learning">Firestore</li>
-          <li title="Moderate Knowledge">PostgreSQL</li>
-          <li title="Moderate Knowledge">MySQL</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="title-section">
-          Testing
-        </h2>
-        <ul class="plain-list skills-list">
-          <li title="Strong Knowledge">Jasmine</li>
-          <li title="Learning">Jest</li>
-          <li title="Strong Knowledge">JUnit</li>
-          <li title="Strong Knowledge">Mockito</li>
-          <li title="Strong Knowledge">Hamcrest</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="title-section">
-          Tools and more
-        </h2>
-        <ul class="plain-list skills-list">
-          <li title="Experienced">Git</li>
-          <li title="Moderate Knowledge">Firebase</li>
-          <li title="Some Knowledge">Jenkins</li>
-          <li title="Strong Knowledge">Spring Framework</li>
-          <li title="Moderate Knowledge">PWAs</li>
-          <li title="Moderate Knowledge">GraphQL</li>
-        </ul>
-      </section>
-    </aside>
-  </div>
-</body>
-
+        <section>
+          <h2 class="title-section">Tools and more</h2>
+          <ul class="plain-list skills-list">
+            <li title="Experienced">Git</li>
+            <li title="Moderate Knowledge">Firebase</li>
+            <li title="Some Knowledge">Jenkins</li>
+            <li title="Strong Knowledge">Spring Framework</li>
+            <li title="Moderate Knowledge">PWAs</li>
+            <li title="Moderate Knowledge">GraphQL</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </body>
 </html>
