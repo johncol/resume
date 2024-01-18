@@ -372,14 +372,31 @@ aside .title-section {
 }
 
 @media print {
+  html, body {
+    font-size: 12px;
+  }
+
   body {
     background-color: #fff;
   }
 
   .container {
     margin: 0 auto;
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 0;
     box-shadow: unset;
+  }
+
+  .skills-list {
+    gap: .5rem;
+  }
+
+  .skills-list li::after {
+    content: unset;
+    display: none;
+  }
+
+  section#education {
+    margin-top: 7rem;
   }
 }
 
