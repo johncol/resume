@@ -4,6 +4,8 @@ html {
   --rgb-for-main-color: 244, 54, 61;
   --main-color: rgb(var(--rgb-for-main-color));
   --main-color-soft: rgba(var(--rgb-for-main-color), 0.3);
+
+  --side-column-width: 11rem;
 }
 
 html,
@@ -105,6 +107,12 @@ address a:hover {
   display: inline;
 }
 
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
 .skills-list li::after {
   content: '';
   display: block;
@@ -192,9 +200,6 @@ aside {
   padding-top: 1rem;
   border-top: 1px dashed #ccc;
   font-size: 0.8rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 3rem;
 }
 
 aside .title-section {
@@ -208,7 +213,7 @@ aside .title-section {
   display: none;
 }
 
-@media (min-width: 600px), print {
+@media (min-width: 550px), print {
   html,
   body {
     font-size: 16px;
@@ -236,7 +241,7 @@ aside .title-section {
 
   header {
     display: grid;
-    grid-template-columns: 1fr 10rem;
+    grid-template-columns: 1fr var(--side-column-width);
   }
 
   header section {
@@ -249,13 +254,12 @@ aside .title-section {
     padding-top: 0;
   }
 
-  aside {
-    grid-template-columns: repeat(3, 1fr);
-    text-align: left;
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 750px), print {
+@media (min-width: 700px), print {
   .container {
     padding: 2rem 2.5rem;
   }
@@ -268,6 +272,10 @@ aside .title-section {
     border-radius: 2.6rem;
     filter: grayscale(1);
   }
+
+  .skills-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 800px), print {
@@ -277,10 +285,10 @@ aside .title-section {
   }
 
   .container {
-    padding: 3.5rem 4rem;
-    max-width: 1000px;
+    padding: 3.5rem 2.5rem;
+    max-width: 1100px;
     display: grid;
-    grid-template-columns: 1fr 10rem;
+    grid-template-columns: 1fr var(--side-column-width);
     grid-template-areas:
       'header header'
       'main aside';
@@ -308,6 +316,10 @@ aside .title-section {
     padding-top: 0;
     margin-top: 1.7rem;
     font-size: 0.9rem;
+
+    .skills-list {
+      grid-template-columns: 1fr;
+    }
   }
 
   aside section:first-child .title-section {
@@ -315,8 +327,9 @@ aside .title-section {
   }
 }
 
-@media (min-width: 1010px), print {
+@media (min-width: 1115px), print {
   .container {
+    padding: 3.5rem 4rem;
     margin: 10px auto;
   }
 }
