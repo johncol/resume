@@ -109,7 +109,7 @@ address a:hover {
 .skills-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: .25rem;
 }
 
 .skills-list li::after {
@@ -255,6 +255,7 @@ aside .title-section {
 
   .skills-list {
     grid-template-columns: repeat(2, 1fr);
+    gap: .25rem 1rem;
   }
 }
 
